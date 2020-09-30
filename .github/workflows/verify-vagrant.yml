@@ -49,7 +49,7 @@ jobs:
       - name: Lint the Inspec profile
         run: bundle exec inspec check .
       - name: Run kitchen test - Couchbase Coummunity 6.0.0
-        run: bundle exec kitchen test --destroy=always ${{ matrix.suite }}-rhel-7-couchbase-602-enterprise || true
+        run: bundle exec kitchen test --destroy=always ${{ matrix.suite }}-rhel-7-couchbase-600-community || true
       - name: Check Kitchen log
         run: cat .kitchen/logs/kitchen.log
       - name: Display our ${{ matrix.suite }} results summary - Couchbase Coummunity 6.0.0
@@ -57,7 +57,7 @@ jobs:
       - name: Ensure the scan meets our ${{ matrix.suite }} results threshold - Couchbase Coummunity 6.0.0
         run: bundle exec inspec_tools compliance -j spec/results/rhel-7-couchbase-6.0.0-community-${{ matrix.suite }}-test-result.json -f threshold.${{ matrix.suite }}.yml
       - name: Run kitchen test - Couchbase Coummunity 6.6.0
-        run: bundle exec kitchen test --destroy=always ${{ matrix.suite }}-rhel-7-couchbase-660-enterprise || true
+        run: bundle exec kitchen test --destroy=always ${{ matrix.suite }}-rhel-7-couchbase-660-community || true
       - name: Check Kitchen log
         run: cat .kitchen/logs/kitchen.log
       - name: Display our ${{ matrix.suite }} results summary - Couchbase Coummunity 6.6.0

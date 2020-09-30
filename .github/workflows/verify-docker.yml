@@ -54,7 +54,7 @@ jobs:
     - name: Ensure the scan meets our ${{ matrix.suite }} results threshold - Couchbase Community 6.0.0
       run: bundle exec inspec_tools compliance -j spec/results/ubuntu-16.04-couchbase-community-6.0.0-${{ matrix.suite }}-test-result.json -f threshold.${{ matrix.suite }}.yml
     - name: Test-Kitchen - Couchbase Community 6.6.0
-      run: bundle exec kitchen test --destroy=always ${{ matrix.suite }}-ubuntu-16.04-couchbase-community-660 || true
+      run: bundle exec kitchen test --destroy=always ${{ matrix.suite }}-ubuntu-1604-couchbase-community-660 || true
     - name: Display our ${{ matrix.suite }} results summary - Couchbase Community 6.6.0
       run: bundle exec inspec_tools summary -j spec/results/ubuntu-16.04-couchbase-community-6.6.0-${{ matrix.suite }}-test-result.json --json-counts | jq .
     - name: Ensure the scan meets our ${{ matrix.suite }} results threshold - Couchbase Community 6.6.0
