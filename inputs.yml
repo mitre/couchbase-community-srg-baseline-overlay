@@ -1,3 +1,4 @@
+
 #description: Couchbase Service Account and Group
 cb_service_user: 'couchbase'
 cb_service_group: 'couchbase'
@@ -39,7 +40,6 @@ cb_roles: [
 
 #description: Couchbase Authentication Options
 cb_use_saslauthd: 'true'
-cb_use_ldap: 'false'
 cb_use_pki: 'true'
 cb_auth_domain: 'local'
 
