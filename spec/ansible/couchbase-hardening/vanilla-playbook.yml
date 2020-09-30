@@ -11,5 +11,5 @@
     - name: Create Admin User
       shell: "/opt/couchbase/bin/couchbase-cli user-manage -c 127.0.0.1:8091 -u admin -p password --set --rbac-username cbadmin --rbac-password doe_cbP@ssw0rd2020 --rbac-name 'Admin User' --roles admin --auth-domain local"
     - name: Create Regular User
-      shell: "/opt/couchbase/bin/couchbase-cli user-manage -c 127.0.0.1:8091 -u admin -p password --set --rbac-username cbuser --rbac-password doe_cbP@ssw0rd2020 --rbac-name 'CB User' --roles bucket_admin[test-data] --auth-domain local"
+      shell: "/opt/couchbase/bin/couchbase-cli user-manage -c 127.0.0.1:8091 -u admin -p password --set --rbac-username cbuser --rbac-password doe_cbP@ssw0rd2020 --rbac-name 'CB User' --roles ro_admin --auth-domain local"
 
