@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-include_controls 'couchbase-enterprise-srg-baseline' do
+include_controls 'couchbase-enterprise-srg-baseline'
 
   control "V-32347" do
     impact 0.0
@@ -217,5 +217,3 @@ include_controls 'couchbase-enterprise-srg-baseline' do
       include LDAP capabilities'
     end
   end
-
-end
