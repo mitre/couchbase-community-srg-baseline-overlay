@@ -160,6 +160,10 @@
     owner: "couchbase"
     group: "couchbase"
 
+- name: Check if Certificate Auth is Required
+  shell: "echo {{ cb_use_pki }}"
+  register: use_pki
+  
 - name: Copy Client Auth Config
   template: 
     src: client-auth-config.json.j2 
