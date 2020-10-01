@@ -12,5 +12,5 @@ version: 0.1.0
 
 depends:
 - name: couchbase-enterprise-srg-baseline
-  git: https://github.com/mitre/couchbase-enterprise-srg-baseline/
+  git: https://github.com/mitre/couchbase-enterprise-srg-baseline.git
   branch: feature/couchbase-init-dev
