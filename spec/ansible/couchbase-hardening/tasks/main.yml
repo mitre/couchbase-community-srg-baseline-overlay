@@ -160,4 +160,22 @@
     owner: "couchbase"
     group: "couchbase"
 
+- name: Copy Client Auth Config
+  template: 
+    src: client-auth-config.json.j2 
+    dest: "{{ cb_client_auth_config }}"
+  when: "use_pki.stdout == 'true'"
+
+- name: Enable Client Auth
+  shell: "/opt/couchbase/bin/couchbase-cli ssl-manage -c {{ cb_cluster_host }}:{{ cb_cluster_port }} --username {{ cb_full_admin }} \
+  --password {{ cb_full_admin_password }} --set-client-auth {{ cb_client_auth_config }}"
+  when: "use_pki.stdout == 'true'"
+
+- name: Set Ownership/Permissions on Couchbase Home clientauthconfig
+  file:
+    path: "{{ cb_home_dir }}/client-auth-config.json"
+    mode: "600"
+    owner: "couchbase"
+    group: "couchbase"    
+
 # # # Add steps to harden

@@ -35,7 +35,8 @@ cb_users: [
 #description: Couchbase Roles
 cb_roles: [
   'admin',
-  'bucket_admin'
+  'bucket_admin', 
+  'ro_admin'
 ]
 
 #description: Couchbase Authentication Options
@@ -96,12 +97,12 @@ cb_required_audit_event_ids: [
 #description: Couchbase Approved Packages - Redhat
 cb_redhat_approved_packages: [
   'couchbase-release',
-  'couchbase-server'
+  'couchbase-server-community'
 ]
 
 #description: Couchbase Approved Packages - Debian
 cb_debian_approved_packages: [
-  'couchbase-server'
+  'couchbase-server-community'
 ]
 
 #description: Couchbase Approved TLS Protocol

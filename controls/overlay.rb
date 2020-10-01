@@ -128,6 +128,87 @@ include_controls 'couchbase-enterprise-srg-baseline' do
     end
   end 
 
+  control "V-58107" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58109" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58111" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58113" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58115" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58117" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58119" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58121" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
+  control "V-58123" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include Auditing capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include Auditing capabilities'
+    end
+  end
+
   control "V-58137" do
     impact 0.0
     describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
