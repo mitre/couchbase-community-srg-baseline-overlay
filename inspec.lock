@@ -1,8 +1,0 @@
----
-lockfile_version: 1
-depends:
-- name: couchbase-enterprise-srg-baseline
-  resolved_source:
-    git: https://github.com/mitre/couchbase-enterprise-srg-baseline.git
-    ref: a7768b1a523f234bf4b17b6551aa58423edf8edd
-  version_constraints: []
