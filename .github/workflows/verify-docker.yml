@@ -33,20 +33,20 @@ jobs:
     - name: Setup caching
       uses: actions/cache@v2
       with:
-        path: vendor/bundle
+        path: bundler
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
     - name: Bundle install
       run: |
         gem install bundler
-        bundle config path vendor/bundle
+        bundle config path bundler
         bundle install
     - name: Regenerate current `profile.json`
       run: |
         bundle exec inspec json . | jq . > profile.json
     - name: Run InSpec Vendor on Profile
-      run: bundle exec inspec vendor --overwrite .
+      run: bundle exec inspec vendor .
     - name: Lint the Inspec profile
       run: bundle exec inspec check .
     - name: Test-Kitchen - Couchbase Community 6.0.0
