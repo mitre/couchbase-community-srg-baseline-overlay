@@ -34,20 +34,20 @@ jobs:
       - name: Setup caching
         uses: actions/cache@v2
         with:
-          path: vendor/bundle
+          path: bundler
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
       - name: Bundle install
         run: |
           gem install bundler
-          bundle config path vendor/bundle
+          bundle config path bundler
           bundle install
       - name: Regenerate current `profile.json`
         run: |
           bundle exec inspec json . | jq . > profile.json
       - name: Run InSpec Vendor on Profile
-        run: bundle exec inspec vendor --overwrite .
+        run: bundle exec inspec vendor .
       - name: Lint the Inspec profile
         run: bundle exec inspec check .
       - name: Run kitchen test - Couchbase Coummunity 6.0.0
@@ -65,7 +65,7 @@ jobs:
       - name: Display our ${{ matrix.suite }} results summary - Couchbase Coummunity 6.6.0
         run: bundle exec inspec_tools summary -j spec/results/rhel-7-couchbase-6.6.0-community-${{ matrix.suite }}-test-result.json --json-counts | jq .
       - name: Ensure the scan meets our ${{ matrix.suite }} results threshold - Couchbase Coummunity 6.6.0
-        run: bundle exec inspec_tools compliance -j spec/results/rhel-7-couchbase-6.6.0-community-${{ matrix.suite }}-test-result.json -f threshold.${{ matrix.suite }}.yml  
+        run: bundle exec inspec_tools compliance -j spec/results/rhel-7-couchbase-6.6.0-community-${{ matrix.suite }}-test-result.json -f threshold.${{ matrix.suite }}.yml
       - name: Save Test Result JSON
         uses: actions/upload-artifact@v2
         with:
