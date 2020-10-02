@@ -46,6 +46,8 @@ jobs:
       - name: Regenerate current `profile.json`
         run: |
           bundle exec inspec json . | jq . > profile.json
+      - name: Run InSpec Vendor on Profile
+        run: bundle exec inspec vendor . 
       - name: Lint the Inspec profile
         run: bundle exec inspec check .
       - name: Run kitchen test - Couchbase Coummunity 6.0.0
