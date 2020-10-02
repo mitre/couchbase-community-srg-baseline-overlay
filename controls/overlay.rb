@@ -20,15 +20,6 @@ include_controls 'couchbase-enterprise-srg-baseline' do
     end
   end
 
-  control "V-32363" do
-    impact 0.0
-    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
-    include Auditing capabilities' do
-      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
-      include Auditing capabilities'
-    end
-  end  
-
   control "V-32364" do
     impact 0.0
     describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
@@ -126,6 +117,33 @@ include_controls 'couchbase-enterprise-srg-baseline' do
       skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
       include Auditing capabilities'
     end
+  end
+
+  control "V-32468" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include saslauthd capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include saslauthd capabilities'
+    end
+  end 
+
+  control "V-32469" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include TLS capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include TLS capabilities'
+    end
+  end 
+
+  control "V-32475" do
+    impact 0.0
+    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+    include TLS capabilities' do
+      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
+      include TLS capabilities'
+    end
   end 
 
   control "V-58107" do
@@ -206,15 +224,6 @@ include_controls 'couchbase-enterprise-srg-baseline' do
     include Auditing capabilities' do
       skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
       include Auditing capabilities'
-    end
-  end
-
-  control "V-58137" do
-    impact 0.0
-    describe 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
-    include LDAP capabilities' do
-      skip 'This control is not applicable on Couchbase Server Community, as the Community version of Couchbase does not 
-      include LDAP capabilities'
     end
   end
 end 
