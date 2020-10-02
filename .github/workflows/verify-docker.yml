@@ -46,7 +46,7 @@ jobs:
       run: |
         bundle exec inspec json . | jq . > profile.json
     - name: Run InSpec Vendor on Profile
-      run: bundle exec inspec vendor . 
+      run: bundle exec inspec vendor --overwrite .
     - name: Lint the Inspec profile
       run: bundle exec inspec check .
     - name: Test-Kitchen - Couchbase Community 6.0.0
