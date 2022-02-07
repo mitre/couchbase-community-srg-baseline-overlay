@@ -1,0 +1,16 @@
+# encoding: utf-8
+#
+name: couchbase-community-srg-baseline-overlay
+title: STIG Baseline for Couchbase Server Community 6.x
+maintainer: MITRE InSpec Team
+copyright: The MITRE Corporation, 2018
+copyright_email: opensource@mitre.org
+summary: The Couchbase Server Community 6.x InSpec profile.
+license: Apache-2.0
+Description: An InSpec Compliance Profile. 
+version: 0.1.0
+
+depends:
+- name: couchbase-enterprise-srg-baseline
+  git: https://github.com/mitre/couchbase-enterprise-srg-baseline.git
+  branch: feature/couchbase-init-dev
